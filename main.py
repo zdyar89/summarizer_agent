@@ -48,5 +48,9 @@ def main():
 
     print(video_ids)
 
+    for id in video_ids:
+        with open(f"./video_summaries/{id}", 'w') as video:
+            video.write(id['contentDetails'])
+
 if __name__ == "__main__":
     main()
